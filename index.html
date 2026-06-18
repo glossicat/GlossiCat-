@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GlossiCat (GLOSI) – Stay Glossy, Stay Wealthy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #05060a;
+      color: #f7f7f7;
+    }
+    header {
+      padding: 24px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(5,6,10,0.9);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .nav a {
+      margin-left: 18px;
+      color: #f7f7f7;
+      text-decoration: none;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+    .nav a:hover {
+      opacity: 1;
+    }
+    .hero {
+      padding: 80px 10% 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+    .hero h1 span {
+      color: #ffd86b;
+    }
+    .hero p {
+      font-size: 16px;
+      max-width: 520px;
+      opacity: 0.9;
+    }
+    .hero-buttons {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid #ffd86b;
+      background: #ffd86b;
+      color: #05060a;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #ffd86b;
+    }
+    .hero-card {
+      border-radius: 24px;
+      padding: 24px;
+      background: radial-gradient(circle at top, #ffd86b22, #05060a);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-card h2 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    .hero-card p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.8;
+      margin-bottom: 12px;
+    }
+    section {
+      padding: 40px 10%;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .card {
+      border-radius: 18px;
+      padding: 18px;
+      background: #0b0d13;
+      border: 1px solid rgba(255,255,255,0.06);
+      font-size: 14px;
+    }
+    .card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .tokenomics-list li {
+      margin-bottom: 6px;
+    }
+    footer {
+      padding: 24px 10%;
+      font-size: 12px;
+      opacity: 0.7;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    a {
+      color: #ffd86b;
+    }
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+      }
+      header {
+        padding: 16px 6%;
+      }
+      section {
+        padding: 32px 6%;
+      }
+      .hero {
+        padding: 60px 6% 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">GLOSSI CAT</div>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#how-to-buy">How to Buy</a>
+      <a href="https://x.com/glossicat7" target="_blank">Twitter</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="badge">Luxury Meme Token • Solana</div>
+        <h1><span>GlossiCat (GLOSI)</span><br />Stay glossy, stay wealthy.</h1>
+        <p>
+          GlossiCat is the glamorous, high‑maintenance meme queen of Solana.
+          She lounges on marble, sips champagne, and only rides green candles.
+          This is a meme token with rich energy, luxury aesthetics, and unapologetic attitude.
+        </p>
+        <div class="hero-buttons">
+          <a class="btn" href="#how-to-buy">Buy GLOSI</a>
+          <a class="btn btn-outline" href="#tokenomics">View Tokenomics</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <h2>Token Snapshot</h2>
+        <p><strong>Name:</strong> GlossiCat</p>
+        <p><strong>Symbol:</strong> GLOSI</p>
+        <p><strong>Chain:</strong> Solana</p>
+        <p><strong>Mint Address:</strong><br />A4KcNhuozWeCPyWtpYhYGVWDdgMjD2j5hrs99ELniE</p>
+        <p style="margin-top:12px;font-size:12px;opacity:0.8;">
+          Always verify the mint address from official channels before trading.
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About GlossiCat</h2>
+      <p>
+        GlossiCat isn’t just a token – she’s a lifestyle. Born in a penthouse spa suite,
+        GlossiCat believes wealth is a mindset, glam is a necessity, and crypto is her playground.
+        Her mission: bring luxury vibes and meme culture together on Solana.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Luxury Aesthetic</h3>
+          <p>
+            Gold accents, marble vibes, and glossy visuals. GlossiCat is designed to look and feel
+            like a premium brand in a meme world.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Meme‑First Culture</h3>
+          <p>
+            Built for viral content, reaction memes, and community‑driven lore. GlossiCat thrives
+            on attitude, humor, and rich energy.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Community‑Driven</h3>
+          <p>
+            No corporate suits, no boring decks. Just a community of holders who believe in
+            staying glossy through every market cycle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tokenomics">
+      <h2>Tokenomics</h2>
+      <p>Simple, transparent, meme‑friendly.</p>
+      <ul class="tokenomics-list">
+        <li><strong>Total Supply:</strong> 1,000,000,000,000 GLOSI</li>
+        <li><strong>Buy/Sell Tax:</strong> 0%</li>
+        <li><strong>Liquidity:</strong> Locked</li>
+        <li><strong>Ownership:</strong> Contract renounced</li>
+        <li><strong>Chain:</strong> Solana</li>
+      </ul>
+      <p style="font-size:12px;opacity:0.8;margin-top:8px;">
+        Meme tokens are highly volatile and speculative. Never invest more than you can afford to lose.
+      </p>
+    </section>
+
+    <section id="how-to-buy">
+      <h2>How to Buy GLOSI</h2>
+      <ol>
+        <li><strong>Step 1:</strong> Install a Solana wallet (e.g., Phantom).</li>
+        <li><strong>Step 2:</strong> Fund your wallet with SOL.</li>
+        <li><strong>Step 3:</strong> Visit a Solana DEX (e.g., Jupiter).</li>
+        <li><strong>Step 4:</strong> Paste the GLOSI mint address:<br />
+          <code>A4KcNhuozWeCPyWtpYhYGVWDdgMjD2j5hrs99ELniE</code>
+        </li>
+        <li><strong>Step 5:</strong> Swap SOL for GLOSI and stay glossy.</li>
+      </ol>
+    </section>
+
+    <section id="community">
+      <h2>Join the GlossiCat Community</h2>
+      <p>
+        Follow our official channels for updates, memes, and new drops:
+      </p>
+      <ul>
+        <li><strong>Twitter/X:</strong> 
+          <a href="https://x.com/glossicat7" target="_blank">https://x.com/glossicat7</a>
+        </li>
+        <li><strong>Telegram:</strong> <a href="#" target="_blank">Coming soon</a></li>
+        <li><strong>Discord:</strong> <a href="#" target="_blank">Coming soon</a></li>
+      </ul>
+      <p style="font-size:12px;opacity:0.8;margin-top:8px;">
+        Always double‑check links from official sources. Beware of impostor accounts and fake contracts.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>GlossiCat (GLOSI) is a community‑driven meme token on Solana. No guarantees, no promises – just glossy vibes and rich energy.</p>
+  </footer>
+</body>
+</html>
