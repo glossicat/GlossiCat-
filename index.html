@@ -22,11 +22,17 @@
     }
 
     body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background: radial-gradient(circle at top, #2b1b10 0%, #050509 55%, #000000 100%);
-      color: var(--text-light);
-    }
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+
+  /* FULL IMAGE BACKGROUND */
+  background-image: url("IMG_1390.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;   /* shows entire image without stretching */
+  background-attachment: fixed; /* makes it stationary */
+  background-color: #000; /* fills space below image */
+}
 
     a {
       color: inherit;
