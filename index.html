@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<title>GlossiCat – Royal Meme Queen</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-
 /* ====== GLOBAL ====== */
 :root {
   --gold: #d4af37;
@@ -16,33 +6,26 @@
   --text-muted: #c3b9a3;
 }
 
-/* Background now repeats down entire site */
+/* ====== BACKGROUND SYSTEM ======
+   IMG_1390 = top hero crest background
+   IMG_1393 = repeating marble background for rest of page
+*/
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 
-  background-image: url("IMG_1390.png");
-  background-repeat: repeat-y;        /* ⭐ repeats vertically */
-  background-position: center top;
-  background-size: contain;           /* ⭐ shows full image without stretching */
-  background-attachment: fixed;       /* ⭐ stationary background */
+  /* TOP HERO BACKGROUND */
+  background-image: url("IMG_1390.png"), url("IMG_1393.png");
+  background-repeat: no-repeat, repeat-y;     /* crest stays top, marble repeats */
+  background-position: center top, center top;
+  background-size: contain, cover;            /* crest stays full, marble fills */
+  background-attachment: fixed;               /* stationary background */
   background-color: #000;
 }
 
-a { color: inherit; text-decoration: none; }
-
-section {
-  padding: 70px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1, h2, h3 {
-  font-family: 'Cinzel', serif;
-}
-
+/* Push first block BELOW crest image */
 .page-wrapper {
-  padding-top: 80px;
+  padding-top: 600px; /* adjust if crest height changes */
 }
 
 /* ====== NAVBAR ====== */
@@ -88,13 +71,12 @@ h1, h2, h3 {
   box-shadow: 0 0 12px rgba(212,175,55,0.6);
 }
 
-/* ====== TRANSPARENT ROYAL FRAME ====== */
-/* ⭐ NEW: Transparent gradient allowing background to show through */
+/* ====== TRANSPARENT BLOCKS ====== */
 .royal-frame {
   background: linear-gradient(
     to bottom,
-    rgba(240,240,240,0.75),
-    rgba(220,220,220,0.65)
+    rgba(255,255,255,0.78),
+    rgba(235,235,235,0.68)
   );
   border-radius: 18px;
   padding: 30px;
@@ -105,24 +87,22 @@ h1, h2, h3 {
     0 0 35px rgba(212,175,55,0.55);
 }
 
-/* ====== TRANSPARENT TOKENOMICS SECTION ====== */
 .tokenomics-section {
   background: linear-gradient(
     to bottom,
-    rgba(240,240,240,0.75),
-    rgba(220,220,220,0.65)
+    rgba(255,255,255,0.78),
+    rgba(235,235,235,0.68)
   );
   border-radius: 18px;
   padding: 50px 25px;
   color: #333;
 }
 
-/* ====== TRANSPARENT VICTORIAN FRAMES ====== */
 .victorian-frame {
   background: linear-gradient(
     to bottom,
-    rgba(255,248,230,0.85),
-    rgba(245,235,210,0.75)
+    rgba(255,248,230,0.88),
+    rgba(245,235,210,0.78)
   );
   padding: 35px;
   margin: 40px auto;
@@ -136,304 +116,26 @@ h1, h2, h3 {
   color: #3a2e1f;
 }
 
-/* ====== BUTTONS ====== */
-.btn-row {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 999px;
-  border: 1px solid var(--gold);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.btn-gold {
-  background: linear-gradient(135deg, #b8860b, #d4af37);
-  color: #050509;
-  box-shadow: 0 0 18px rgba(212,175,55,0.6);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--gold);
-  border-color: rgba(212,175,55,0.7);
-}
-
 /* ====== POPUP ====== */
-.popup-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-}
-
 .popup {
   background: rgba(20,20,20,0.85);
-  border-radius: 18px;
-  padding: 25px;
-  max-width: 420px;
-  text-align: center;
-  border: 2px solid rgba(212,175,55,0.7);
-  box-shadow: 0 0 30px rgba(212,175,55,0.7);
-  position: relative;
 }
 
-/* ====== ROADMAP ====== */
-.roadmap-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px;
-  justify-items: center;
-}
-
+/* ====== ROADMAP CARDS ====== */
 .phase-card {
   background: rgba(30,30,40,0.85);
-  border-radius: 14px;
-  padding: 20px;
-  border: 1px solid rgba(212,175,55,0.4);
-  box-shadow: 0 0 18px rgba(0,0,0,0.5);
-  width: 100%;
-  max-width: 320px;
 }
 
 /* ====== LORE VIDEO ====== */
 .lore-video {
-  width: 100%;
   border-radius: 18px;
   box-shadow: 0 0 30px rgba(212,175,55,0.7);
   border: 2px solid rgba(212,175,55,0.7);
-  margin-bottom: 18px;
 }
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
-  .roadmap-grid {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  .page-wrapper {
+    padding-top: 450px;
   }
 }
-
-</style>
-</head>
-
-<body>
-
-<!-- POPUP -->
-<div class="popup-backdrop" id="buyPopup">
-  <div class="popup">
-    <div class="popup-close" onclick="closePopup()">✕</div>
-    <img src="IMG_1278.png" alt="Buy GLOSI Poster" />
-    <div class="popup-title">Buy GLOSI Now</div>
-    <div class="popup-text">
-      Enter the royal treasury and claim your share of the GlossiVerse.
-    </div>
-    <button class="btn btn-gold"
-      onclick="window.open('https://raydium.io/swap/?inputMint=4AKcNchuoZwEPcyWptYnYGWVDdq9Mjb2Sjhrs99ELniE&outputMint=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R', '_blank')">
-      Buy on Solana
-    </button>
-  </div>
-</div>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="nav-inner">
-    <a href="#about" class="nav-btn">About</a>
-    <a href="#welcome" class="nav-btn">Welcome to the Glossiverse</a>
-    <a href="#roadmap" class="nav-btn">Roadmap</a>
-    <a href="#buy" class="nav-btn">Buy Glossi</a>
-    <a href="#mission-vision" class="nav-btn">Mission & Vision</a>
-    <a href="#tokenomics" class="nav-btn">Tokenomics</a>
-    <a href="#social" class="nav-btn">Social Links</a>
-    <a href="#lore" class="nav-btn">Lore</a>
-    <a href="#faq" class="nav-btn">Royal FAQ Chamber</a>
-  </div>
-</nav>
-
-<div class="page-wrapper">
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="royal-frame">
-    <h1 class="section-title-main">GlossiCat</h1>
-    <div class="section-subtitle">The Royal Meme Queen of Solana</div>
-
-    <div class="two-column">
-      <div class="col">
-        <p>
-          GlossiCat is a luxury meme token and character brand built on Solana — a royal presence in a noisy world. Quiet moves, loud results. Every holder becomes part of the kingdom, every meme strengthens the throne.
-        </p>
-      </div>
-
-      <div class="col" style="text-align:center;">
-        <img src="IMG_1374.jpeg" alt="GlossiCat Royal"
-          style="max-width:100%;border-radius:18px;box-shadow:0 0 30px rgba(212,175,55,0.7);border:2px solid rgba(212,175,55,0.7);" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WELCOME -->
-<section id="welcome">
-  <div class="royal-frame">
-    <h1 class="section-title-main">Welcome to the GlossiVerse</h1>
-    <div class="section-subtitle">A Royal Digital Kingdom of Culture, Lore, and Community Power</div>
-    <p style="text-align:center;max-width:800px;margin:0 auto;">
-      The GlossiVerse is a living, expanding kingdom built around GlossiCat — a Meme Queen whose rise is powered by culture, storytelling, and community conviction. Every chapter, every drop, every holder adds to the royal myth.
-    </p>
-  </div>
-</section>
-
-<!-- ROADMAP -->
-<section id="roadmap">
-  <div class="royal-frame">
-    <h1 class="section-title-main">Roadmap</h1>
-    <div class="section-subtitle">Elegance Transforms Destiny</div>
-
-    <div class="roadmap-grid">
-      <!-- All roadmap cards unchanged -->
-      <div class="phase-card">
-        <div class="phase-title">Phase 1 – Emergence</div>
-        <div class="phase-status">Status: Topcat</div>
-        <ul class="phase-list">
-          <li>Launch on Solana</li>
-          <li>Core branding & website</li>
-          <li>Key listings achieved</li>
-          <li>Social channels initiated</li>
-        </ul>
-      </div>
-
-      <div class="phase-card">
-        <div class="phase-title">Phase 2 – High Society</div>
-        <div class="phase-status">Status: Active</div>
-        <ul class="phase-list">
-          <li>Community growth expansion</li>
-          <li>Continued marketing efforts</li>
-          <li>Exclusive partnerships</li>
-          <li>Alliance building</li>
-        </ul>
-      </div>
-
-      <div class="phase-card">
-        <div class="phase-title">Phase 3 – Glamour Framework</div>
-        <div class="phase-status">Status: Upcoming</div>
-        <ul class="phase-list">
-          <li>Enhanced rewards & utility</li>
-          <li>Holder loyalty & burns</li>
-          <li>Expanding collaborations</li>
-          <li>Strategic scaling</li>
-        </ul>
-      </div>
-
-      <div class="phase-card">
-        <div class="phase-title">Phase 4 – Royal Ascension</div>
-        <div class="phase-status">Status: Future</div>
-        <ul class="phase-list">
-          <li>Global presence expansion</li>
-          <li>Exclusive community events</li>
-          <li>Major partnerships & integrations</li>
-          <li>Royal branding evolution</li>
-        </ul>
-      </div>
-
-      <div class="phase-card">
-        <div class="phase-title">Phase 5 – Glitter Legacy</div>
-        <div class="phase-status">Status: Long Term</div>
-        <ul class="phase-list">
-          <li>Enduring meme brand</li>
-          <li>Expanded token utility</li>
-          <li>Royalty ecosystem expansion</li>
-          <li>Continuous innovation</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="roadmap-image-wrapper">
-      <img src="IMG_1250.png" alt="Official GlossiCat Roadmap Poster" class="roadmap-image" />
-    </div>
-  </div>
-</section>
-
-<!-- BUY GLOSSI -->
-<section id="buy">
-  <div class="royal-frame">
-    <h1 class="section-title-main">Buy Glossi</h1>
-    <div class="section-subtitle">Enter the Royal Treasury</div>
-
-    <div style="text-align:center;margin-bottom:25px;">
-      <img src="IMG_1084.png" alt="Buy Glossi Banner"
-        style="max-width:100%;border-radius:18px;box-shadow:0 0 30px rgba(212,175,55,0.7);border:2px solid rgba(212,175,55,0.7);" />
-    </div>
-
-    <p style="text-align:center;max-width:700px;margin:0 auto;">
-      Claim your throne in the GlossiVerse by acquiring GLOSSI — the luxury meme token of Solana. Quiet moves, loud results. Every buy strengthens the kingdom.
-    </p>
-
-    <div class="btn-row">
-      <button class="btn btn-gold" onclick="openPopup()">Buy GLOSI</button>
-      <button class="btn btn-outline"
-        onclick="window.open('https://raydium.io/swap/?inputMint=4AKcNchuoZwEPcyWptYnYGWVDdq9Mjb2Sjhrs99ELniE&outputMint=4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R', '_blank')">
-        Buy on Solana
-      </button>
-      <button class="btn btn-outline"
-        onclick="window.open('https://jup.ag/swap/SOL-GLOSI', '_blank')">
-        Buy on Jupiter
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- MISSION & VISION -->
-<section id="mission-vision">
-  <div class="royal-frame">
-    <h1 class="section-title-main">Mission & Vision</h1>
-    <div class="section-subtitle">Quiet Moves, Loud Results</div>
-    <p style="text-align:center;max-width:800px;margin:0 auto;">
-      GlossiCat’s mission is to build a luxury meme brand with real community power — a kingdom where culture, storytelling, and conviction drive value. The vision is a living GlossiVerse: animated lore, mini‑apps, royal events, and a meme queen that feels inevitable.
-    </p>
-  </div>
-</section>
-
-<!-- TOKENOMICS -->
-<section id="tokenomics">
-  <div class="tokenomics-section">
-    <h1 class="section-title-main gold-text">Glossi Tokenomics</h1>
-    <div class="section-subtitle" style="color:#555;">Royal Structure of the Meme Queen’s Economy</div>
-
-    <div class="tokenomics-grid">
-      <div class="tokenomics-item">
-        <h3>Total Supply</h3>
-        <p>1,000,000,000,000 GLOSI</p>
-      </div>
-
-      <div class="tokenomics-item">
-        <h3>Buy / Sell Tax</h3>
-        <p>0% / 0%</p>
-      </div>
-
-      <div class="tokenomics-item">
-        <h3>Liquidity</h3>
-        <p>Locked</p>
-      </div>
-
-      <div class="tokenomics-item">
-        <h3>Ownership</h3>
-        <p>Renounced</p>
-      </div>
-    </div>
-
-    <div class="tokenomics-breakdown">
-      <h3 style="text-align:center;font-family:'Cinzel',serif;color:#444;">Distribution Breakdown</h3>
-      <ul>
-        <li><strong>60% Community & Growth Fund</strong> — Airdrops, Rewards & Ecosystem Growth.</li>
-        <li><strong>25% Liquidity Pool</strong> — Locked Liquidity on
