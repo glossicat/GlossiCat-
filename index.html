@@ -40,7 +40,7 @@
     /* GLOBAL LAYOUT */
     .page-wrapper {
     min-height: 100vh;
-    background: url(IMG_1292.png) center top / cover no-repeat fixed;
+    background: url(IMG_1393.png) center top / cover no-repeat fixed;
 }
 
     }
@@ -538,6 +538,21 @@
             </div>
           </div>
         </section>
+.hero-image {
+  background-image: url('IMG_1328.png'); /* your hero image */
+  background-size: cover;               /* fills the entire hero area */
+  background-position: center;          /* centers the cats */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;                        /* full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image img {
+  display: none; /* hides the old <img> so only the background shows */
+}
 
         <!-- ABOUT -->
         <section id="about">
@@ -652,10 +667,39 @@ Soon it will become a realm without borders.
         </section>
 
         <!-- ROADMAP -->
-       <img src="IMG_1250.png" alt="GlossiCat Roadmap" class="roadmap-img">
+       .roadmap-image {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 100%;
+}
+        .roadmap-header {
+  text-align: center;
+}
+        <img src="IMG_1250.png" alt="GlossiCat Roadmap" class="roadmap-img">
         <section id="roadmap">
           <div class="section-card">
             <div class="section-header">
+              <div class="victorian-frame">
+  <h2>LAUNCH CEREMONY</h2>
+  <p>The royal token is minted and the kingdom opened its gates on Solana.</p>
+</div>
+
+<div class="victorian-frame">
+  <h2>MEME QUEEN ASCENSION</h2>
+  <p>The Ascension of the Meme Queen began the moment GlossiCat stepped out...</p>
+</div>
+
+<div class="victorian-frame">
+  <h2>COMMUNITY CORONATION</h2>
+  <p>Strong holder base, royal citizens, and loyal believers form the court...</p>
+</div>
+
+<div class="victorian-frame">
+  <h2>ROYAL EXPANSION</h2>
+  <p>Global reach, cross-platform presence, and partnerships extend the GlossiVerse...</p>
+</div>
+
               <div class="section-title">Roadmap</div>
               <div class="section-subtitle">Elegance Transforms Destiny</div>
             </div>
@@ -803,6 +847,13 @@ We aim to expand the GlossiVerse beyond borders, shaping a future where meme tok
                 <div class="pie-placeholder">
                   Tokenomics Chart<br /><img src="IMG_1339.png" alt="GlossiCat Tokenomics Chart" class="tokenomics-img">
                 </div>
+                .tokenomics-img {
+  width: auto;          /* keeps natural width */
+  max-width: 100%;      /* prevents overflow on small screens */
+  height: auto;         /* keeps natural height */
+  display: block;
+  margin: 0 auto;       /* centers the poster */
+}
                 <div class="btn-row" style="margin-top:18px;">
                   <button
                     class="btn btn-outline"
@@ -894,7 +945,11 @@ The GlossiVerse expands as new citizens join the mission, strengthening the king
                 <div class="btn-row" style="justify-content:center;">
                   <button
                     class="btn btn-gold"
-                    onclick="window.open('https://glossicat.com/lore-trailer', '_blank')"
+                    onclick="window.open('https://glossicat.com)"
+                      <video class="lore-video" controls autoplay muted loop>
+    <source src="My Movie 3.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
                   >
                     Play Lore Animation
                   </button>
@@ -977,3 +1032,38 @@ It is the realm where her lore unfolds, relics hold power, her citizens gather, 
   </script>
 </body>
 </html>
+.lore-video {
+  width: 100%;
+  max-width: 500px; /* adjust size if needed */
+  display: block;
+  margin: 0 auto 20px auto;
+  border-radius: 12px;
+}
+.victorian-frame {
+  background: #fff8e6;
+  padding: 35px;
+  margin: 50px auto;
+  max-width: 900px;
+  border-radius: 14px;
+  border: 12px solid #d4af37;
+  box-shadow:
+    0 0 0 6px #b08d2f,
+    0 0 0 12px #f5e2a6,
+    0 0 25px rgba(212,175,55,0.55);
+}
+
+.victorian-frame h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  color: #b8860b;
+  letter-spacing: 1px;
+}
+
+.victorian-frame p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3a2e1f;
+}
+
